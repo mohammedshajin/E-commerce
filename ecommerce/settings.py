@@ -32,6 +32,22 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
+SESSION_COOKIE_AGE = 86400
+CART_SESSION_ID = 'cart'
+
+STRIPE_PUB_KEY = 'pk_test_51IuWjxSE3f2Hhlixj9Oallum2BlJd4uLegOYuWjZLSsT1lVSZoWb662n20CwxVVdtNo8aSaze9eFusyu04zUWOu500noO2YoEp'
+STRIPE_SECRET_KEY = 'sk_test_51IuWjxSE3f2HhlixGskjhHi3HxrY8HcuYSWoErToLgp1oX6A2hWC578F3sV0cyQ1smILbb8xHWkdOR6zCxyq8AJr00OXlbRi83'
+
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = 'typeyourkey'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_EMAIL_FROM = 'Galaxy <noreply@galaxy.com>'
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,7 +59,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.core',
     'apps.user',
-    'apps.product'
+    'apps.product',
+    'apps.cart',
+    'apps.order'
 ]
 
 MIDDLEWARE = [

@@ -16,3 +16,5 @@ class Product(models.Model):
         self.slug = slugify(self.title + '-' + str(uuid.uuid4()))
         super(Product, self).save()
 
+    
+
